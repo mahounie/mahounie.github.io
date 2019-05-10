@@ -86,6 +86,9 @@
       xhr.onreadystatechange = function() {
           console.log(xhr.status, xhr.statusText);
           console.log(xhr.responseText);
+          gtag('event', 'Submit', {
+          'event_category': 'Form',
+          'event_label': 'Click'});
           form.reset();
           var formElements = form.querySelector(".form-elements")
           if (formElements) {
